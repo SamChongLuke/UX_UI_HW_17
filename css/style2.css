@@ -55,28 +55,39 @@ button {
 
 }
 
+img.hamburgerMenu  {
+    padding-right: 50px;
+    display: none;
+}
+
 #heroGrid {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 848px;
-    grid-template-areas: "heroSummary heroImage";
+    padding-top: 32px;
+    padding-bottom: 40px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 848px; */
+    /* grid-template-areas: "heroSummary heroImage"; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #heroSummary {
     grid-area: heroSummary;
     /*background-color: blue;*/
-    padding-top: 25%;
     padding-left: 50px;
+   
 
 }
 
 p.summary {
     padding-bottom: 48px;
+    width: 700px;
 }
 
 #heroImage {
-    padding-left: 120px;
+    /* padding-left: 120px; */
+    padding-right: 50px;
 }
 
 #contentGrid {
@@ -129,26 +140,43 @@ p.projectDescription {
     grid-area: thumbnail3;
 }
 
-section.footer {
+footer {
     background-color: #AEDECF;
-    vertical-align: top;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    /* align-items: center;  */
 }
+/* .footer { */
+    /* background-color: #AEDECF; */
+    /* display: flex; */
+    /* align-items: center; */
 
-ul.footerInlineBlock {
-    display: inline-flex;
+ul.footer{
     list-style: none;
-    justify-content: space-evenly;
+    display: inline-flex;
+    float: right;
+    
+}
+.social {
+    margin-left: 30px;
+
 }
 
 @media only screen and (max-width: 600px) {
     body {
      
-      margin-right: -60px;
-      display: column;
+      /*margin-right: -60px;*/
+      /*display: column;*/
      
     }
 
-    p.summar {
+    img.hamburgerMenu  {
+        padding-right: 50px;
+        display: flex;
+    }
+
+    p.summary {
         width: 400px;
     }
     .logo {
@@ -160,17 +188,24 @@ ul.footerInlineBlock {
     }
     
     #heroGrid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 848px 848px;
-        grid-template-areas: 
-        "heroSummary"
-        "heroImage";
+        /* grid-template-columns: 1fr; */
+        /* grid-template-rows: 848px 848px;/ */
+        /* grid-template-areas:  */
+        /* "heroSummary" */
+        /* "heroImage"; */
+        flex-direction: column;
     }
 
     img {
         margin-left: -60px;
     }
 
+    #heroImage {
+        padding-right: 0;
+        padding-top: 40px;
+    }
+
+  
     #contentGrid {
         grid-template-columns: 1fr;
         grid-template-rows: 386px 386px 386px 386px 386px 386px;
@@ -193,5 +228,9 @@ ul.footerInlineBlock {
 
     #project3 {
         padding-top: 20%;
+    }
+    
+    .social {
+        height: 30px;
     }
 }
