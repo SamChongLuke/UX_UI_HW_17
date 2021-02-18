@@ -187,7 +187,7 @@ ul.footer{
         display: none;
     }
     
-    #heroGrid {
+    #hero {
         /* grid-template-columns: 1fr; */
         /* grid-template-rows: 848px 848px;/ */
         /* grid-template-areas:  */
@@ -203,6 +203,10 @@ ul.footer{
     #heroImage {
         padding-right: 0;
         padding-top: 40px;
+    }
+
+    #heroSummary {
+        margin-left: 0;
     }
 
   
